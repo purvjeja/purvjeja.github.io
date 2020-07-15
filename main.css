@@ -1,0 +1,17 @@
+.main-middle-container{
+  /* background-color:white; */
+  display:flex;
+  width:700px
+}
+button{
+  background-color: black;
+  color:white;
+}
+.pp{
+  border-radius:200px;
+}
+
+.image>p{
+  margin-top: 20px;
+  font-size: 50px;
+}
