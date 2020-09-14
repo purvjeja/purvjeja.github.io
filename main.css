@@ -3,21 +3,11 @@
   display:flex;
   width:700px
 }
-button{
-  background-color: black;
-  color:white;
-}
 .pp{
   border-radius:200px;
 }
-h2{
-
-}
-h3{
-
-}
 a{
-
+color:blue;
 }
 .p{
   margin-top: 20px;
