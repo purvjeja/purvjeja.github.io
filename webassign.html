@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> AMC Students </title>
+    <title> Student Profile</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     body{
@@ -16,7 +16,7 @@
         margin-top: 10px;
       }
       .container-main{
-        border:2px solid red;
+        border:10px solid red;
         height: 100%;
         width: 90%;
         background-color: white;
@@ -66,14 +66,23 @@
         left: 15%;
       }
       .img-pass{
-        position: relative;
-        left: 45%;
+        position: relative;;
         width: 150px;
         height: 200px;
       }
       .img-foot{
         width: 100%;
         height: 300px;
+      }
+      .smallbox{
+        width: 50%;
+        height: 100px;
+      }
+      .box1{
+        margin-left: 5%;
+      }
+      .box2{
+        margin-left: 8%;
       }
       table {
   font-family: arial, sans-serif;
@@ -100,16 +109,16 @@ tr:nth-child(even) {
   <center>
     <div class="container-main">
             <div class="heading">
-                <div class="head">
-                  <img class="img-head" src="img/header.svg">
-                </div>
-                <div class="img">
-                    <h1 style="font-size: 50px; ">Student Profile</h1>
-                    <h2 style="font-size: 45px;margin: 0px;">PURV JEJA</h2>
-                </div>
-                <img class="img-pass" style="border-style: solid; border-color: black; border-width: 1px;" src="img/PASSPORT.jpg">
-            </div>
-
+                <div class="smallbox"><img class="img-head" src="img/header.svg">
+                </div>  
+                  <div class="smallbox box1">
+                    <h2 class="img" style="font-size: 50px;  padding-top: 10px;">PURV JEJA</h2>  
+                  </div>
+                  <div class="smallbox box2">
+                    <img class="img-pass" style="border-style: solid; border-color: black; border-width: 1px;" src="img/PASSPORT.jpg">
+                  </div>
+                  
+              </div>
             <hr>
            <div class="container">
              <div class="">
@@ -194,7 +203,7 @@ tr:nth-child(even) {
              </div>
              <br>
              <br>
-             <hr style="width: 1000px;">
+             <hr style="width: 70%;">
              <div class="scrolling">
                 <div class="scrol1">
                   <h3>His Goal => </h3>
