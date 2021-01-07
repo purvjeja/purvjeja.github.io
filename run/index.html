@@ -1,37 +1,66 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Run 2021</title>
+    <link rel="icon" href="running.png" />
     <style media="screen">
       table,tr,td,th{
         border:solid 2px black;
       }
+      th{
+        height: 100px;
+        font-size: 30px;
+        font-weight: bold;
+      }
       table{
-        width:35%;
+        width:60%;
+        height: 500px;
+        text-align: center;
+      }
+      .bar{
+        background-color: grey;
+        width:60%;
+        height:35px;
+        border-radius: 50px;
+        margin-left: 20%;
+      }
+      a{
+        color: blue;
+      }
+      .image-move{
+        margin-left: 00%;
       }
     </style>
   </head>
   <body>
     <center>
-      <h1>Running Statastics</h1>
+      <br></br>
+      <h1 style="font-size: 50px;">Running Statastics</h1>
+      <h2>Total Target 1000 KM in 2021</h2>
+      <br></br>
+      <h2 id="totalshow">Total Run : 0 km / 1000 km</h2>
+    </center>
+        <div class="bar">
+        <div id="myBar" class="w3-container" style="width:0%; height: 35px; border-radius: 50px;  text-align: center; background-color: green;"><p style="font-size: 25px;" id="text"></p></div> <div height="20px" width="60%" id="class-move" class="image-move"><img src="running.png" style="width:70px; height:70px;"></div>
+      </div>
+      <center>
       <br>
       <br>
-      <h3>Total Run : 0 km / 1000 km</h3>
-      <table>
-        <tr>
-          <th>Date</th>
-          <th>Distance (Km)</th>
-          <th>Time (Minutes)</th>
-          <th>More Stats</th>
-        </tr>
-        <tr>
-          <td>02 - 01 - 21</td>
-          <td>5</td>
-          <td>38</td>
-          <td><a href="#">More info :-></a></td>
-        </tr>
-      </table>
+      <br></br>
+      <table class = "table table-stripped">
+        <thead>
+          <tr>
+            <th>DATE</th>
+            <th>DISTANCE (KM)</th>
+            <th>TIME (MIN)</th>
+            <th>MORE STATASTICS</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+        </table>
+      <script src="index.js" type="text/javascript"></script>
     </center>
   </body>
 </html>
