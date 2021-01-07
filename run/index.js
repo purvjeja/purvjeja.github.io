@@ -11,14 +11,15 @@ request.onload= function(){
       var temp = "";
       for (var i = 0; i < data.length; i++) {
         temp += "<tr>";
+        temp += "<td>" + (i+1) +"</td>";
         temp += "<td>" + data[i][0].slice(0,16) +"</td>";
         temp += "<td>" + data[i][1] +"</td>";
         temp += "<td>" + data[i][2] +"</td>";
-        temp += "<td> <a href="+ data[i][3] +" > MORE =></a></td></tr>";
+        temp += "<td> <a href="+ data[i][3] +" > MORE ></a></td></tr>";
         totalrun = totalrun + data[i][1];
       }
       totalrun = totalrun.toFixed(2);
-      document.getElementById("totalshow").innerHTML = "Total Run :" + totalrun + " km / 1000 km";
+      document.getElementById("totalshow").innerHTML = "Total Run : " + totalrun + " km / 1000 km";
       document.getElementById("data").innerHTML = temp;
       var elem = document.getElementById("myBar");
       var class_move = document.getElementById("class-move");
