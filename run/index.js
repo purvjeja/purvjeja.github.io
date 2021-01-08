@@ -1,4 +1,3 @@
-//console.log(fetch('https://reqres.in/api/users'));
 var totalrun = 0;
 var request = new XMLHttpRequest();
 request.open("GET","https://purv-run.herokuapp.com/api");
@@ -25,16 +24,22 @@ request.onload= function(){
       var class_move = document.getElementById("class-move");
       var width = 0;
       var bar_percentage = totalrun / 10;
-      var id = setInterval(frame, 100);
+      var id = setInterval(frame, 50);
       function frame() {
-        if(width >= bar_percentage){
+        if(width >= bar_percentage || width == 100){
           clearInterval(id);
         }
         else{
             width++;
             elem.style.width = width + '%';
-            document.getElementById("text").innerHTML = width * 1  + '%';
-            class_move.style.marginLeft = width + '%';
+            if(width < 20){
+              document.getElementById("text1").innerHTML = width * 1  + '% Completed ';
+              if(width == 19)     document.getElementById("text1").innerHTML = '';
+
+            }else{
+              document.getElementById("text").innerHTML = width * 1  + '% Completed ';
+            }
+            class_move.style.marginLeft = width*0.55 + '%';
         }
       }
   }

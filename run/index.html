@@ -13,8 +13,8 @@
         font-weight: bold;
       }
       table{
-        width:60%;
-        height: 200px;
+        width:80%;
+        height: 300px;
         text-align: center;
       }
       .bar{
@@ -28,7 +28,9 @@
         color: blue;
       }
       .image-move{
-        margin-left: 00%;
+        position: absolute;
+        top:300px;
+        display: flex;
       }
     </style>
   </head>
@@ -40,10 +42,13 @@
       <br></br>
       <h2 id="totalshow">Total Run : 0 km / 1000 km</h2>
     </center>
-        <div class="bar">
-        <div id="myBar" class="w3-container" style="width:0%; height: 35px; border-radius: 50px;  text-align: center; background-color: green;"><p style="font-size: 25px;" id="text"></p></div> <div height="20px" width="60%" id="class-move" class="image-move"><img src="running.png" style="width:70px; height:70px;"></div>
+
+        <div id="bb" class="bar">
+        <div id="myBar" class="w3-container" style="width:0%; height: 35px; border-radius: 50px;  text-align: center; background-color: green;"><p style="font-size: 25px;" id="text"></p></div>
+        <div height="20px" width="60%" id="class-move" class="image-move"><img src="running.png" style="width:70px; height:70px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="font-size: 25px; font-weight: bolder;" id="text1"></p></div>
       </div>
-      <center>
+
+    <center>
       <br>
       <br>
       <br></br>
