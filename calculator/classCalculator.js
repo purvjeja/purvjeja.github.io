@@ -1,11 +1,17 @@
 class calculator {
     expression = "";
     constructor(calculatorName, whereTo) {
-
+        this.totalCalculation = 0;
+        
         this.calculatorHeading = document.createElement('h1');
         this.calculatorHeading.setAttribute("style"," margin-top : 100px;");
         this.calculatorHeading.innerHTML = "Calculator Name : " + calculatorName;
         document.querySelector(whereTo).append(this.calculatorHeading);
+
+        this.calculationCount = document.createElement('h1');
+        // this.calculationCount.setAttribute("style"," margin-top : 100px;");
+        this.calculationCount.innerHTML = "Calculation Made : " + this.totalCalculation;
+        document.querySelector(whereTo).append(this.calculationCount);
 
         this.mainElement = document.createElement('div');
         this.mainElement.className = calculatorName;
@@ -253,28 +259,29 @@ class calculator {
         this.expression = this.inputElement.value;
         if(this.expression[1] == '*' || this.expression[1] == '/' || this.expression[1] == '-' || this.expression[1] == '+')  this.errorShow();
         else{
+          this.totalCalculation++;
+          this.calculationCount.innerHTML = "Calculation Made : " + this.totalCalculation;
           this.result = eval(this.expression);
           this.inputElement.value = this.result;
           this.calculatedHistoryAreaButton(this.expression + ' = ' + this.result);
           this.expression = "";
-      }
+        }
     }
 
     copyToInput(textContent){
-        
         textContent = textContent.substring(0,textContent.indexOf('=') - 1);
-        this.expression += textContent;
+        this.expression = textContent;
         this.inputElement.value = textContent;
     }
 
     calculatedHistoryAreaButton(content) {
-        this.buttonForExpressionCopy = document.createElement('button');
-        this.buttonForExpressionCopy.id="calculationMade";
+        this.buttonForExpressionCopy = "buttonForExpressionCopy"+this.totalCalculation.toString();
+        this.buttonForExpressionCopy = document.createElement('div');
+        this.buttonForExpressionCopy.className = "calculationMade";
         this.buttonForExpressionCopy.innerHTML = content;
         this.buttonForExpressionCopy.addEventListener("click", this.copyToInput.bind(this,content));
-        this.calculatedHistoryArea.innerHTML  += "<hr>"; 
         this.calculatedHistoryArea.append(this.buttonForExpressionCopy);
+      
     }
-
 }
 let objectOf = new calculator("Main", "#nCalculators");

@@ -8,16 +8,20 @@
     height: 90px;
 }
 
-#calculationMade{
-    width: 100%;
+.calculationMade{
+    width: 95%;
     background: transparent;
     border:0px;
     font-size: 40px;
+    border : 2px solid white;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding-left: 20px;
 }
-#calculationMade:hover{
-    border:0px;
+.calculationMade:hover{
     color:wheat;
     background-color: black;
+    border : 2px solid wheat;
 }
 
 button{
