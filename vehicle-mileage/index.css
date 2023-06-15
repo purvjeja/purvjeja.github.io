@@ -1,0 +1,32 @@
+.tr {
+    border: 1px solid black; 
+    margin: 2px; 
+    height: 30px;
+}
+
+.td {
+    text-align: center;
+}
+
+.table {
+    width: 95%; 
+    height: 100%; 
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+}
+
+
+.stats {
+    height: 250px; 
+    width: 80%; 
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+    margin: 40px; 
+    padding: 20px; 
+    border: 2px solid greenyellow; 
+    border-radius: 15px;
+}
+
+span {
+    color: green;
+}

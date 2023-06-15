@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Mileage Calculator</title>
+    <meta></meta>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="callExistingData()" style="width: 100%; height: 100%; display: grid; justify-items: center;">  
+    <div style="display: flex; gap: 20px">
+        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="kms" placeholder="Enter KM">
+        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="price" placeholder="Enter Amount">
+        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="fuelRate" placeholder="Enter Fuel Price">
+        <input type="button" style="width: 50px; height: 30px; border-radius: 10px;" id="submitButton" onclick="addData()" value="Add">
+    </div>
+
+    <div id="stats" class="stats">
+        <h1> Mileage: <span id="mileage">NA</span></h1>
+        <h1> Total Kms: <span id="totalkms">NA</span></h1>
+        <h1> Total  Amount: <span id="totalamount">NA</span></h1>
+        <h1> Average Fuel Price: <span id="avgfuelprice">NA </span></h1>
+    </div>
+    <table id="tableElement" class="table">
+        <tr class="tr">
+            <th>Date</th>
+            <th>Kilo Meters</th>
+            <th>Amount</th>
+            <th>Fuel Price</th>
+        </tr>
+    </table>
+</body>
+<script src="./index.js"></script>
+</html>
