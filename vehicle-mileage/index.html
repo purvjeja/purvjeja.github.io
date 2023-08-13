@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Mileage Calculator</title>
-    <meta></meta>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body onload="callExistingData()" style="width: 100%; height: 100%; display: grid; justify-items: center;">  
-    <div style="display: flex; gap: 20px">
-        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="kms" placeholder="Enter KM">
-        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="price" placeholder="Enter Amount">
-        <input type="number" style="width: 200px; height: 25px; border-radius: 10px;" id="fuelRate" placeholder="Enter Fuel Price">
-        <input type="button" style="width: 50px; height: 30px; border-radius: 10px;" id="submitButton" onclick="addData()" value="Add">
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="This is an web application which calculates any vehicle mileage with some normal inputs like kms, fuel rate and amount of fuel filled." />
+		<meta name="keywords" content="Mileage, Calculator, Mileage, Stats, Purv, Jeja" />
 
-    <div id="stats" class="stats">
-        <h1> Mileage: <span id="mileage">NA</span></h1>
-        <h1> Total Kms: <span id="totalkms">NA</span></h1>
-        <h1> Total  Amount: <span id="totalamount">NA</span></h1>
-        <h1> Average Fuel Price: <span id="avgfuelprice">NA </span></h1>
-    </div>
-    <table id="tableElement" class="table">
-        <tr class="tr">
-            <th>Date</th>
-            <th>Kilo Meters</th>
-            <th>Amount</th>
-            <th>Fuel Price</th>
-        </tr>
-    </table>
-</body>
-<script src="./index.js"></script>
+		<title>Vehicle Mileage Calculator</title>
+		<link rel="icon" href="favicon.png" />
+		<link rel="stylesheet" href="index.css" />
+
+		<!-- Open Graph's tags -->
+		<meta property="og:title" content="Vehicle Stats Maintainer" />
+		<meta property="og:type" content="Application - Vehicle Mileage Calculator" />
+		<meta property="og:url" content="https://purvjeja.github.io/vehicle-mileage" />
+		<meta property="og:image" content="https://purvjeja.github.io/vehicle-mileage/favicon.png" />
+		<meta
+			property="og:description"
+			content="This is an web application which calculates any vehicle mileage with some normal inputs like kms, fuel rate and amount of fuel filled." />
+	</head>
+	<body onload="callExistingData()" style="width: 100%; height: 100%; display: grid; justify-items: center; background-color: #051123; color: wheat">
+		<h2>Hey, <span id="vehicleNumber"></span>'s Owner</h2>
+		<h4>Should fuel up again around <span id="nextFuelKm"> - </span> Kms</h4>
+
+		<h3 style="margin: 0px; margin-top: 40px; margin-bottom: 10px">- Let's add some data -</h3>
+		<div style="display: grid; gap: 20px; justify-items: center">
+			<input type="number" style="width: 300px; height: 30px; border-radius: 10px; padding: 4px; font-size: smaller" id="kms" placeholder="Total Kilometer" />
+			<input type="number" style="width: 300px; height: 30px; border-radius: 10px; padding: 4px; font-size: smaller" id="price" placeholder="Amount" />
+			<input type="number" style="width: 300px; height: 30px; border-radius: 10px; padding: 4px; font-size: smaller" id="fuelRate" placeholder="Current Fuel Price" />
+			<input type="button" style="width: 200px; height: 40px; border-radius: 10px; font-size: x-large; font-weight: 800" id="submitButton" onclick="addData()" value="Add" />
+		</div>
+
+		<h3 style="margin: 0px; margin-top: 100px; margin-bottom: 5px">- Here are some quick stats untill date -</h3>
+		<div id="stats" class="stats">
+			<h2>Mileage: <span id="mileage">NA</span></h2>
+			<h2>Total Kms: <span id="totalkms">NA</span></h2>
+			<h2>Total Amount: <span id="totalamount">NA</span></h2>
+			<h2>Average Fuel Price: <span id="avgfuelprice">NA </span></h2>
+			<h2>Petrol filled in Liters: <span id="petrolFilled">NA </span></h2>
+		</div>
+
+		<h3 style="margin: 0px; margin-top: 60px; margin-bottom: 10px">- All Inputs -</h3>
+		<table id="tableElement" class="table">
+			<tr class="tr">
+				<th>Date</th>
+				<th>Kilo Meters</th>
+				<th>Amount</th>
+				<th>Fuel Price</th>
+			</tr>
+		</table>
+
+		<h5 style="padding: 20px; margin-top: 40px">Note: Stay tune with your mileage calculation, there will be new stats and enhancements with your data in near future.</h5>
+
+		<!-- <h3 style="margin-top: 40px">Made with ❤️ By <a href="https://www.purvjeja.com">Purv H Jeja</a></h3> -->
+		<h3 style="padding: 40px">Made with ❤️ By <a href="https://www.linkedin.com/in/purvjeja/">Purv</a></h3>
+	</body>
+	<script src="./index.js"></script>
 </html>
